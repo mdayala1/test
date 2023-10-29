@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" >
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        
         <title>test</title>
     </head>
     <body>
-        <h1>Test</h1>
+        <form>
+            <label for="name">Name:<span class="required">*</span></label>
+            <input id="name" type="text" required aria-required="true">
+          
+            <label for="email">Email:<span class="required">*</span></label>
+            <input id="email" type="email" required aria-required="true">
+          
+            <label for="phone">Phone:<span class="required">*</span></label>
+            <input id="phone" type="tel" required aria-required="true">
+          
+            <fieldset>
+              <legend>Preferred Contact Method<span class="required">*</span></legend>
+          
+              <input id="by_phone" type="radio" name="contact_method" value="by_phone" required aria-required="true">
+              <label for="by_phone">Phone</label>
+          
+              <input id="by_email" type="radio" name="contact_method" value="by_email" required aria-required="true">
+          
+              <label for="by_email">Email</label>
+            </fieldset>
+          
+            <label for="message">Message<span class="required">*</span></label>
+            <textarea id="message" required aria-required="true"></textarea>
+            <input type="submit" name="submit" value="Submit">
+        </form>
     </body>
 </html>
